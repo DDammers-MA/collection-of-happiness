@@ -1,0 +1,82 @@
+@use "../../abstracts/colors";
+@use "../../abstracts/mixins";
+.sectionRight{
+
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        flex-direction: column;
+        
+        
+
+        &__article{
+            background-image: url();
+            height: 15rem;
+            width: 70%;
+            border-radius: 0.5rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+
+        }
+
+        &__date{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &__title{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &__textArea{
+            padding: 2rem;
+            width: 75%;
+        }
+
+        &__audio{
+            padding: 1rem;
+        }
+
+        &__buttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem;
+            width: 80%;
+            
+        }
+
+        &__button{
+            @include mixins.flex;
+    
+
+            width: 20rem;
+            background: map-get(colors.$baseColors, "black");
+            border-radius: 0.5rem;
+            color: white;
+            position: relative;
+            border: none;
+            font-size: 110%;
+
+            &--source{
+                border: none;
+                background: none;
+                position: absolute;
+                right: 6%;
+                color: map-get(colors.$baseColors, "black");
+            
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+ 
+
+
+    
